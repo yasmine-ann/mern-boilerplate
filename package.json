@@ -7,7 +7,7 @@
     "coverage": "jest --coverage",
     "buildDev": "webpack --config webpack.server-dev.config.js && webpack --config webpack.dev.config.js",
     "buildProd": "webpack --config webpack.server-prod.config.js && webpack --config webpack.prod.config.js",
-    "dbOn": "mkdir -p ./db && mongo --dbpath ./db",
+    "dbOn": "mkdir -p ./db && mongo",
     "start": "node -r dotenv/config ./dist/server.js"
   },
   "jest": {

@@ -11,6 +11,9 @@ const isDevelopment = process.env.NODE_ENV === "development" ? true : false;
 
 const app = express();
 
+//Enable cors
+app.use(cors())
+
 //DB setup
 mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI);
@@ -39,6 +42,6 @@ if (isDevelopment) {
 }
 
 //Listen
-app.listen(PORT, funtion() {
+app.listen(PORT, function() {
     console.log('Server is listening...');
 });

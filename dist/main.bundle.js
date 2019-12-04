@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "aaeef27b8c00ac71123b";
+/******/ 	var hotCurrentHash = "20a82fad5faa66a1725b";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -993,7 +993,7 @@ ansiHTML.reset()
 
 exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "h1 {\n  color: orange;\n  text-decoration: underline; }\n", ""]);
+exports.push([module.i, "h1 {\n  color: purple;\n  text-decoration: underline; }\n\n.welcome {\n  text-align: center;\n  font-family: 'Georgia';\n  margin-top: 200px; }\n", ""]);
 
 
 /***/ }),
@@ -34464,10 +34464,10 @@ if (true) {
 
 /***/ }),
 
-/***/ "./src/client/components/Message.js":
-/*!******************************************!*\
-  !*** ./src/client/components/Message.js ***!
-  \******************************************/
+/***/ "./src/client/components/App.js":
+/*!**************************************!*\
+  !*** ./src/client/components/App.js ***!
+  \**************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -34477,13 +34477,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
 
-var Message = function Message() {
+function App() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "content"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Yasmine's Boilerplate"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "A MERN stack boilerplate project"));
-};
+    className: "welcome"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Yaz's MERN Boilerplate"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "This is a MERN Boilerplate project using Webpack"));
+}
 
-/* harmony default export */ __webpack_exports__["default"] = (Message);
+/* harmony default export */ __webpack_exports__["default"] = (App);
 
 /***/ }),
 
@@ -34500,14 +34500,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _src_client_components_Message_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../src/client/components/Message.js */ "./src/client/components/Message.js");
+/* harmony import */ var _src_client_components_App_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../src/client/components/App.js */ "./src/client/components/App.js");
 /* harmony import */ var _client_assets_scss_main_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./client/assets/scss/main.scss */ "./src/client/assets/scss/main.scss");
 /* harmony import */ var _client_assets_scss_main_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_client_assets_scss_main_scss__WEBPACK_IMPORTED_MODULE_3__);
 
 
 
 
-react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_src_client_components_Message_js__WEBPACK_IMPORTED_MODULE_2__["default"], null), document.getElementById('react-container'));
+react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_src_client_components_App_js__WEBPACK_IMPORTED_MODULE_2__["default"], null), document.getElementById('root'));
 
 /***/ }),
 
