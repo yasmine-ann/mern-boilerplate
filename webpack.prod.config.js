@@ -11,11 +11,10 @@ module.exports = {
   entry: {
     main: "./src/index.js"
   },
-  devtool: "source-map",
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         use: {
           loader: "babel-loader",
           options: {
@@ -55,7 +54,9 @@ module.exports = {
     ]
   },
   optimization: {
-      minimizer: [new TerserPlugin()],
+      minimizer: [new TerserPlugin({
+        exclude: /node_modules/,
+      })],
   },
   plugins: [
       new MiniCssExtractPlugin({
