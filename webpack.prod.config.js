@@ -29,43 +29,50 @@ module.exports = {
         }
       },
       {
-          test: /\.(scss|css)$/,
-          use: [
-              {
-                  loader: MiniCssExtractPlugin.loader
-              },
-              'css-loader',
-              'postcss-loader',
-              'sass-loader'
-          ]
+        test: /\.(scss|css)$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader
+          },
+          "css-loader",
+          "postcss-loader",
+          "sass-loader"
+        ]
       },
       {
-          test: /\.(png|jpg|gif|svg)$/,
-          use: {
-              loader: 'url-loader',
-              options: {
-                  limit: 8000,
-                  fallback: require.resolve('responsive-loader'),
-                  quality: 65,
-                  sizes: [300, 600]
-              }
+        test: /\.(png|jpg|gif|svg)$/,
+        use: {
+          loader: "url-loader",
+          options: {
+            limit: 8000,
+            fallback: require.resolve("responsive-loader"),
+            quality: 65,
+            sizes: [300, 600]
           }
+        }
       }
     ]
   },
   optimization: {
-      minimizer: [new TerserPlugin({
-        exclude: /node_modules/,
-      })],
+    minimizer: [
+      new TerserPlugin({
+        exclude: /node_modules/
+      })
+    ]
   },
   plugins: [
-      new MiniCssExtractPlugin({
-        filename: './assets/css/[name].css',
-        chunkFilename: './assets/css/[id].css'
-      }),
+    new MiniCssExtractPlugin({
+      filename: "./assets/css/[name].css",
+      chunkFilename: "./assets/css/[id].css"
+    }),
     new HtmlWebpackPlugin({
       template: "./src/index.html",
       excludeChunks: ["server"]
     })
-  ]
-}
+  ],
+  output: {
+    filename: "[name].bundle.js",
+    path: path.resolve(__dirname, "dist"),
+    publicPath: "/"
+  }
+};
